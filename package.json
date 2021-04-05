@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/leesherwood28/Personal-Site/issues"
   },
-  "homepage": "https://github.com/leesherwood28/Personal-Site#readme"
+  "homepage": "https://github.com/leesherwood28/Personal-Site#readme",
+  "devDependencies": {
+    "typescript": "^4.2.3"
+  }
 }
