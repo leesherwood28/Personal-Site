@@ -1,1 +1,10 @@
 @import './media.scss';
+
+.bubble-1 {
+    position: absolute;
+    left: 5px;
+    bottom: 100px;
+    height: 50vh;
+    width: 50vw;
+    z-index: -1;
+}

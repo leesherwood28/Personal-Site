@@ -28,8 +28,11 @@
     flex-direction: column;
     align-self: center;
   }
-  
+
+
   @import './node_modules/aos/dist/aos.css';
   @import './node_modules/bootstrap/dist/css/bootstrap.css';
   @import './styles/typography.scss';
   @import './styles/section.scss';
+
+  @import './styles/section-intro.scss';
