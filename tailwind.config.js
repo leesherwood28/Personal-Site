@@ -9,7 +9,8 @@ module.exports = {
     },
     extend: {
       transitionProperty: {
-        'width': 'width'
+        'width': 'width',
+        'left': 'left'
       },
       spacing: {
         '22': '5.5rem',
@@ -21,7 +22,8 @@ module.exports = {
       width: ['hover'],
       display: ['group-hover'],
       rotate: ['group-hover'],
-      transform: ['group-hover']
+      transform: ['group-hover'],
+      inset: ['group-hover']
     },
   },
   plugins: [],
