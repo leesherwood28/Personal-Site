@@ -1,7 +1,5 @@
 import * as AOS from 'aos';
 import $ from 'jquery';
-import 'popper.js';
-import 'bootstrap';
 
 // Needs to be done after elements are loaded
 setTimeout(() => {
