@@ -25,6 +25,7 @@
     "@fortawesome/fontawesome-free": "^5.15.3",
     "aos": "^2.3.4",
     "jquery": "^3.6.0",
+    "postcss-modules": "^4.0.0",
     "tailwindcss": "^2.1.1"
   }
 }
