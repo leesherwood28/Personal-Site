@@ -11,6 +11,9 @@ module.exports = {
       transitionProperty: {
         'width': 'width'
       },
+      spacing: {
+        '22': '5.5rem',
+      }
     },
   },
   variants: {
