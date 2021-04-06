@@ -10,3 +10,7 @@
   @tailwind base;
   @tailwind components;
   @tailwind utilities;
+
+  nav {
+    transition: 200ms cubic-bezier(0.075, 0.82, 0.165, 1);
+  }
