@@ -1,28 +1,27 @@
+:root {
+  font-size: 18px;
+  background-color: #f5f6fa;
+  font-family: 'Roboto', sans-serif;
+}
 
-  :root {
-    font-size: 18px;
-    background-color: #f5f6fa;
-    font-family: 'Roboto', sans-serif;
-  }
-  
-  @import './node_modules/aos/dist/aos.css';
-  @import './node_modules/@fortawesome/fontawesome-free/css/all.css';
-  @import './styles/glass.scss';
-  @tailwind base;
-  @tailwind components;
-  @tailwind utilities;
+@import './node_modules/aos/dist/aos.css';
+@import './node_modules/@fortawesome/fontawesome-free/css/all.css';
+@import './styles/glass.scss';
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-  nav {
-    background-color: #23232e;
-    transition: 200ms cubic-bezier(0.075, 0.82, 0.165, 1);
-  }
+nav {
+  background-color: rgb(10, 10, 10);
+  transition: 200ms cubic-bezier(0.075, 0.82, 0.165, 1);
+}
 
-  nav a {
-    filter: grayscale(100%); opacity: 0.7;
-    transition: 200ms cubic-bezier(0.075, 0.82, 0.165, 1);
-  }
+nav a {
+  filter: grayscale(100%) opacity(0.7);
+  transition: 200ms cubic-bezier(0.075, 0.82, 0.165, 1);
+}
 
-  nav a:hover {
-    filter: grayscale(0%) opacity(1);
-    background-color: #141418;
-  }
+nav a:hover {
+  filter: grayscale(0%) opacity(1);
+  background-color: #141418;
+}
