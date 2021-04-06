@@ -2,6 +2,7 @@
   :root {
     font-size: 18px;
     background-color: #f5f6fa;
+    font-family: 'Roboto', sans-serif;
   }
   
   @import './node_modules/aos/dist/aos.css';
@@ -12,5 +13,16 @@
   @tailwind utilities;
 
   nav {
+    background-color: #23232e;
     transition: 200ms cubic-bezier(0.075, 0.82, 0.165, 1);
+  }
+
+  nav a {
+    filter: grayscale(100%); opacity: 0.7;
+    transition: 200ms cubic-bezier(0.075, 0.82, 0.165, 1);
+  }
+
+  nav a:hover {
+    filter: grayscale(0%) opacity(1);
+    background-color: #353b48;
   }
