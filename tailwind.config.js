@@ -19,7 +19,9 @@ module.exports = {
   variants: {
     extend: {
       width: ['hover'],
-      display: ['group-hover']
+      display: ['group-hover'],
+      rotate: ['group-hover'],
+      transform: ['group-hover']
     },
   },
   plugins: [],
