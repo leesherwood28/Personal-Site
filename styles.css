@@ -12,7 +12,7 @@
 @tailwind utilities;
 
 nav {
-  background-color: rgb(10, 10, 10);
+  background-color: rgb(20, 20, 20);
 }
 
 nav a {
@@ -21,5 +21,5 @@ nav a {
 
 nav a:hover {
   filter: grayscale(0%) opacity(1);
-  background-color: #141418;
+  background-color: rgb(30, 30, 30);
 }
