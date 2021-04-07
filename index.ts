@@ -5,6 +5,7 @@ $(document).ready(() => setupListeners());
 
 function setupListeners() {
   setupMobileNav();
+  setupScrollIntoView();
 }
 
 function setupMobileNav() {
@@ -24,8 +25,7 @@ function setupMobileNav() {
   });
 }
 
-// Needs to be done after elements are loaded
-setTimeout(() => {
+function setupScrollIntoView() {
   var delay = 0;
   $('[data-aos]').each(function () {
     if (isElementInViewport(this)) {
@@ -37,7 +37,7 @@ setTimeout(() => {
     duration: 300,
     easing: 'ease-in-sine',
   });
-}, 0);
+}
 
 function isElementInViewport(el) {
   var rect = el.getBoundingClientRect();
