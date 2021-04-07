@@ -6,7 +6,6 @@ module.exports = {
   theme: {
     fontFamily: {
       'montserrat': ['Montserrat', 'sans-serif'],
-      'opensans': ['Open Sans', 'sans-serif']
     },
     extend: {
       transitionProperty: {
