@@ -16,7 +16,7 @@
     <link rel="stylesheet" href="./styles.css" />
     <script src="./index.ts"></script>
   </head>
-  <body>
+  <body class="flex flex-col h-screen w-screen overflow-hidden">
     <nav
       class="hidden md:block font-montserrat font-semibold transition-width duration-200 text-yellow-600 z-10 group fixed hover:w-56 w-20 pb-2 h-screen"
     >
@@ -67,32 +67,39 @@
       </ol>
     </nav>
 
-    <nav
-      class="md:hidden font-montserrat fixed h-20 pl-2 pr-2 w-screen top-0"
-    ></nav>
+    <nav class="md:hidden font-montserrat fixed h-20 pl-2 pr-2 w-screen top-0">
+      <a class="flex items-center w-full h-20 cursor-pointer">
+        <i class="fas fa-phone fa-2x ml-6 mr-6"></i>
+        <span class="group-hover:block hidden">Contact</span>
+      </a>
+    </nav>
 
-    <main class="md:ml-20 mt-20 md:mt-0 p-4">
-      <figure
-        data-aos="fade-up"
-        data-aos-once="true"
-        class="md:flex rounded-xl p-8 md:p-0 glass overflow-hidden"
-      >
-        <img
-          class="w-32 h-32 md:w-48 md:h-auto md:rounded-none rounded-full mx-auto"
-          src="./assets/me.jpg"
-          alt="Picture of Lee Sherwood"
-          width="384"
-          height="512"
-        />
-        <div class="pt-6 md:p-8 text-center md:text-left space-y-4">
-          <h1 class="text-3xl">About</h1>
-          <p class="text-lg text-gray-700">
-            Lee Sherwood is a proffesional software engineer with many years of
-            experience at a range of technologies. He specialises as a front end
-            developer
-          </p>
-        </div>
-      </figure>
+    <main
+      class="md:ml-20 mt-20 md:mt-0 p-4 flex flex-col overflow-auto flex-grow"
+    >
+      <div class="flex flex-col">
+        <figure
+          data-aos="fade-up"
+          data-aos-once="true"
+          class="md:flex rounded-xl p-8 md:p-0 glass overflow-hidden"
+        >
+          <img
+            class="w-32 h-32 md:w-48 md:h-auto md:rounded-none rounded-full mx-auto"
+            src="./assets/me.jpg"
+            alt="Picture of Lee Sherwood"
+            width="384"
+            height="512"
+          />
+          <div class="pt-6 md:p-8 text-center md:text-left space-y-4">
+            <h1 class="text-3xl">About</h1>
+            <p class="text-lg text-gray-700">
+              Lee Sherwood is a proffesional software engineer with many years
+              of experience at a range of technologies. He specialises as a
+              front end developer
+            </p>
+          </div>
+        </figure>
+      </div>
     </main>
   </body>
 </html>
