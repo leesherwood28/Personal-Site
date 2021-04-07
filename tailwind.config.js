@@ -10,7 +10,8 @@ module.exports = {
     extend: {
       transitionProperty: {
         'width': 'width',
-        'left': 'left'
+        'left': 'left',
+        'height': 'height'
       },
       spacing: {
         '22': '5.5rem',
