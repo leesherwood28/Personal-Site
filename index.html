@@ -115,12 +115,42 @@
           />
 
           <div class="grid grid-cols-1 md:grid-cols-2 gap-8 place-items-center">
-            <div data-aos="fade-up" data-aos-once="true">
+            <div
+              data-aos="fade-up flex flex-col items-center"
+              data-aos-once="true"
+            >
               <img
-                class="w-40 h-40 md:w-60 md:h-auto rounded-full mx-auto"
+                class="w-40 h-40 rounded-full mx-auto"
                 src="./assets/me.jpg"
                 alt="Picture of Lee Sherwood"
               />
+
+              <div class="w-40 h-4 relative">
+                <span class="absolute inset-0 animate-wordRotate">Age: 28</span>
+                <span
+                  style="animation-delay: 3s"
+                  class="absolute inset-0 animate-wordRotate opacity-0"
+                  >Name: 28</span
+                >
+                <span
+                  style="animation-delay: 6s"
+                  class="absolute inset-0 animate-wordRotate opacity-0"
+                  >Career: 28</span
+                >
+              </div>
+
+              <div class="w-40 flex rw-wrapper">
+                <h2 class="rw-sentence">
+                  <div class="rw-words">
+                    <span>breathtaking moments</span>
+                    <span>lovely sounds</span>
+                    <span>incredible magic</span>
+                    <span>unseen experiences</span>
+                    <span>happy feelings</span>
+                    <span>beautiful butterflies</span>
+                  </div>
+                </h2>
+              </div>
             </div>
 
             <div data-aos="fade-up" data-aos-once="true" class="sm:max-w-xs">
@@ -138,8 +168,6 @@
                 range of different technologies
               </p>
             </div>
-
-            <div data-aos="fade-up" data-aos-once="true">Hello</div>
           </div>
         </section>
       </div>

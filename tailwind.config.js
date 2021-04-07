@@ -15,7 +15,35 @@ module.exports = {
       },
       spacing: {
         '22': '5.5rem',
-      }
+      },
+      animation: {
+        wordRotate: 'wordRotate 9s linear infinite 0s'
+      },
+      keyframes: {
+        wordRotate: {
+          '0%': {
+            transform: 'translateY(-100%)',
+            opacity: 0,
+            'animation-timing-function': 'ease-in',
+          },
+          '8%': {
+            transform: 'translateY(0%)',
+            opacity: 1
+          },
+          '19%': {
+            transform: 'translateY(0%)',
+            opacity: 1
+          },
+          '25%': {
+            transform: 'translateY(100%)',
+            opacity: 0
+          },
+          '100%': {
+            transform: 'translateY(100%)',
+            opacity: 0
+          }
+        }
+       }
     },
   },
   variants: {
