@@ -18,7 +18,7 @@
   </head>
   <body>
     <nav
-      class="font-montserrat font-semibold transition-width duration-200 text-yellow-600 z-10 group fixed hover:w-56 w-20 pt-2 pb-2 h-screen"
+      class="hidden md:block font-montserrat font-semibold transition-width duration-200 text-yellow-600 z-10 group fixed hover:w-56 w-20 pb-2 h-screen"
     >
       <ol class="flex flex-col">
         <li>
@@ -67,7 +67,11 @@
       </ol>
     </nav>
 
-    <main class="ml-24 p-4">
+    <nav
+      class="md:hidden font-montserrat fixed h-20 pl-2 pr-2 w-screen top-0"
+    ></nav>
+
+    <main class="md:ml-20 mt-20 md:mt-0 p-4">
       <figure
         data-aos="fade-up"
         data-aos-once="true"
