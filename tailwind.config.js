@@ -22,6 +22,7 @@ module.exports = {
       width: ['hover'],
       display: ['group-hover'],
       rotate: ['group-hover'],
+      translate: ['group-hover'],
       transform: ['group-hover'],
       inset: ['group-hover']
     },
