@@ -68,14 +68,17 @@
     </nav>
 
     <nav class="md:hidden font-montserrat fixed h-20 w-screen top-0">
-      <a class="flex items-center w-full h-20 cursor-pointer text-gray-400">
+      <a
+        id="mobile-menu-button"
+        class="flex items-center w-full h-20 cursor-pointer text-gray-400"
+      >
         <i class="fas fa-bars fa-2x ml-6 mr-6"></i>
       </a>
     </nav>
 
     <!-- Mobile menu, show/hide based on menu state. -->
     <div
-      class="md:h-0 md:hidden overflow-hidden transition-height duration-500 fixed w-screen top-20 bg-black h-52 font-montserrat z-10"
+      class="md:h-0 h-0 md:hidden overflow-hidden transition-height duration-200 fixed w-screen top-20 bg-black font-montserrat z-10"
       id="mobile-menu"
     >
       <div class="px-2 pt-2 pb-3 sm:px-3 flex flex-col">

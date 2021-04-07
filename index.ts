@@ -1,6 +1,29 @@
 import * as AOS from 'aos';
 import $ from 'jquery';
 
+$(document).ready(() => setupListeners());
+
+function setupListeners() {
+  setupMobileNav();
+}
+
+function setupMobileNav() {
+  const menu = $('#mobile-menu');
+  const menuButton = $('#mobile-menu-button');
+  let menuOpen: boolean = false;
+
+  menuButton.on('click', () => {
+    if (menuOpen) {
+      menu.removeClass('h-52');
+      menu.addClass('h-0');
+    } else {
+      menu.removeClass('h-0');
+      menu.addClass('h-52');
+    }
+    menuOpen = !menuOpen;
+  });
+}
+
 // Needs to be done after elements are loaded
 setTimeout(() => {
   var delay = 0;
