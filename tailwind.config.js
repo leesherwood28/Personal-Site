@@ -5,7 +5,8 @@ module.exports = {
   darkMode: false, // or 'media' or 'class'
   theme: {
     fontFamily: {
-      'montserrat': ['Montserrat', 'sans-serif']
+      'montserrat': ['Montserrat', 'sans-serif'],
+      'opensans': ['Open Sans', 'sans-serif']
     },
     extend: {
       transitionProperty: {
