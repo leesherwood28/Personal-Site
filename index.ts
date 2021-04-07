@@ -13,15 +13,38 @@ function setupMobileNav() {
   const menuButton = $('#mobile-menu-button');
   let menuOpen: boolean = false;
 
+  const outsideClickListener = (ev) => {
+    if (!menuOpen) {
+      return;
+    }
+    if (
+      menu.find(ev.target).length === 0 &&
+      menuButton.find(ev.target).length === 0
+    ) {
+      closeMenu();
+    }
+  };
+
+  const closeMenu = () => {
+    menu.removeClass('h-52');
+    menu.addClass('h-0');
+    $(document).off('click', outsideClickListener);
+    menuOpen = false;
+  };
+
+  const openMenu = () => {
+    menu.removeClass('h-0');
+    menu.addClass('h-52');
+    menuOpen = true;
+    $(document).on('click', outsideClickListener);
+  };
+
   menuButton.on('click', () => {
     if (menuOpen) {
-      menu.removeClass('h-52');
-      menu.addClass('h-0');
+      closeMenu();
     } else {
-      menu.removeClass('h-0');
-      menu.addClass('h-52');
+      openMenu();
     }
-    menuOpen = !menuOpen;
   });
 }
 
