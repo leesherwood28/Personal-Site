@@ -26,15 +26,15 @@ module.exports = {
             opacity: 0,
             'animation-timing-function': 'ease-in',
           },
-          '8%': {
+          '7%': {
             transform: 'translateY(0%)',
             opacity: 1
           },
-          '19%': {
+          '33%': {
             transform: 'translateY(0%)',
             opacity: 1
           },
-          '25%': {
+          '40%': {
             transform: 'translateY(100%)',
             opacity: 0
           },
