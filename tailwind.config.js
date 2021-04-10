@@ -4,6 +4,7 @@ module.exports = {
   theme: {
     fontFamily: {
       'montserrat': ['Montserrat', 'sans-serif'],
+      'anton': ['Anton', 'sans-serif']
     },
     extend: {
       transitionProperty: {
