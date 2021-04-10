@@ -5,12 +5,16 @@
 }
 
 @import './node_modules/aos/dist/aos.css';
+@import './node_modules/animate.css/animate.min.css';
 @import './node_modules/@fortawesome/fontawesome-free/css/all.css';
-@import './styles/into.scss';
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.animate__delay-750ms {
+  animation-delay: 750ms;
+}
 
 .word-rotate .animate-wordRotate:nth-child(2) {
   animation-delay: 3s;
