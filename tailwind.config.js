@@ -16,7 +16,7 @@ module.exports = {
         '22': '5.5rem',
       },
       animation: {
-        wordRotate: 'wordRotate 9s linear infinite 0s'
+        wordRotate: 'wordRotate 9s linear infinite 0s',
       },
       keyframes: {
         wordRotate: {
@@ -41,7 +41,7 @@ module.exports = {
             transform: 'translateY(100%)',
             opacity: 0
           }
-        }
+        },
        }
     },
   },
