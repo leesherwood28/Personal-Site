@@ -141,22 +141,24 @@
           </dv>
         </section>
 
-        <section class="flex">
+        <section class="grid grid-cols-3 grid-rows-1">
           <div
-            class="flex-1 h-screen sticky top-0 flex items-center justify-center bg-yellow-600"
+            class="col-span-1 h-screen sticky top-0 flex items-center justify-center bg-yellow-600"
           >
             <h1 class="text-4xl font-montserrat mb-4 font-light text-white">
               About
             </h1>
           </div>
-          <div class="flex-1 text-center flex flex-col items-center py-8 px-20">
+          <div
+            class="col-span-2 text-center flex flex-col items-center py-8 px-40"
+          >
             <img
               class="w-60 h-60 rounded-full mb-4"
               src="./assets/me.jpg"
               alt="Picture of Lee Sherwood"
             />
 
-            <div class="w-40 h-4 relative word-rotate mb-4">
+            <div class="w-40 h-4 relative word-rotate mb-8">
               <span class="absolute inset-0 animate-wordRotate">
                 <b>Name:</b>
                 <span> Lee Sherwood </span>
@@ -175,7 +177,7 @@
               About Me
             </h2>
 
-            <p class="text-sm mb-4">
+            <p class="text-sm mb-8">
               Hello I'm Lee. A freelance Front End Developer based in Dorset.
 
               <br />
@@ -192,7 +194,7 @@
             <h2 class="text-2xl font-montserrat font-light py-4 mb-2">
               Coding Philosophies
             </h2>
-            <ul class="list-disc text-left text-sm">
+            <ul class="list-disc text-left text-sm mb-8 self-start">
               <li>
                 <b>Always try to learn new skills:</b> Dont get stuck in old
                 patterns/ ways of thinking
@@ -207,17 +209,29 @@
                 important coding standard in my opinion
               </li>
             </ul>
+
+            <h2 class="text-2xl font-montserrat font-light py-4 mb-2">
+              Hobbies and Interests
+            </h2>
+
+            <ul class="list-disc text-left text-sm self-start">
+              <li>Coding</li>
+              <li>Gaming</li>
+              <li>Watching films</li>
+              <li>Astronomy</li>
+              <li>Physics</li>
+            </ul>
           </div>
         </section>
 
-        <section class="flex">
+        <section class="grid grid-cols-3 grid-rows-1">
           <div
-            class="flex-1 h-screen sticky top-0 flex items-center justify-center"
+            class="col-span-1 h-screen sticky top-0 flex items-center justify-center"
           >
             <h1 class="text-4xl font-montserrat mb-4 font-light">Skills</h1>
           </div>
           <div
-            class="flex-1 text-center flex flex-col items-center py-8 px-20 text-white bg-black"
+            class="col-span-2 text-center flex flex-col items-center py-8 px-20 text-white bg-black"
           >
             <h2 class="text-2xl font-montserrat font-light py-4 mb-2">
               Web Technologies
