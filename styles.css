@@ -10,6 +10,19 @@
 @tailwind components;
 @tailwind utilities;
 
+.desktop-menu-item {
+  @apply flex items-center w-full h-20 cursor-pointer;
+}
+
+.desktop-menu-item__icon {
+  @apply ml-6 mr-6;
+  font-size: 2em;
+}
+
+.desktop-menu-item__text {
+  @apply group-hover:block hidden;
+}
+
 .info-section {
   @apply grid grid-cols-3 grid-rows-1;
 }
