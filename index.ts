@@ -1,4 +1,3 @@
-import * as AOS from 'aos';
 import $ from 'jquery';
 
 $(document).ready(() => setupListeners());
@@ -103,20 +102,6 @@ function setupMobileNav() {
     } else {
       openMenu();
     }
-  });
-}
-
-function setupScrollIntoView() {
-  var delay = 0;
-  $('[data-aos]').each(function () {
-    if (isElementInViewport(this)) {
-      delay = delay + 100;
-      $(this).attr('data-aos-delay', delay);
-    }
-  });
-  AOS.init({
-    duration: 300,
-    easing: 'ease-in-sine',
   });
 }
 
