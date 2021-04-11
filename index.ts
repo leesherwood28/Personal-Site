@@ -15,7 +15,11 @@ function setupScrollReveal() {
       if (!entry.isIntersecting) {
         return;
       }
-      entry.target.classList.add('animate__animated', 'animate__fadeInUp');
+      entry.target.classList.add(
+        'animate__animated',
+        'animate__fadeInUp',
+        'revealed'
+      );
     });
   };
   const observer = new IntersectionObserver(handleIntersect, { threshold: 1 });
