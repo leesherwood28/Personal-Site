@@ -8,7 +8,8 @@ module.exports = {
     },
     extend: {
       colors: {
-        'white-smoke': '#f5f6fa'
+        'white-smoke': '#f5f6fa',
+        'deep-gray': '#3F3F45'
       },
       transitionProperty: {
         'width': 'width',
