@@ -3,7 +3,10 @@ footer {
 }
 
 @keyframes slideFromLeft {
-  from {
+  0% {
+    transform: translateX(-30vw);
+  }
+  20% {
     transform: translateX(-30vw);
   }
   to {
@@ -11,8 +14,80 @@ footer {
   }
 }
 
-#left-bracket {
+@keyframes slideFromRight {
+  0% {
+    transform: translateX(30vw);
+  }
+  20% {
+    transform: translateX(30vw);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes bounceInSlash {
+  from,
+  20%,
+  40%,
+  60%,
+  80%,
+  to {
+    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+  }
+
+  0% {
+    opacity: 0;
+  }
+
+  80% {
+    opacity: 0;
+  }
+
+  75% {
+    opacity: 0;
+    transform: scale3d(0.3, 0.3, 0.3);
+  }
+
+  80% {
+    transform: scale3d(1.1, 1.1, 1.1);
+  }
+
+  85% {
+    transform: scale3d(0.9, 0.9, 0.9);
+  }
+
+  90% {
+    opacity: 1;
+    transform: scale3d(1.03, 1.03, 1.03);
+  }
+
+  95% {
+    transform: scale3d(0.97, 0.97, 0.97);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale3d(1, 1, 1);
+  }
+}
+
+#logo-left-bracket {
   animation: slideFromLeft 1s linear 1;
+  animation-play-state: paused;
+  animation-delay: calc(var(--scroll) * -1s);
+  animation-fill-mode: both;
+}
+
+#logo-right-bracket {
+  animation: slideFromRight 1s linear 1;
+  animation-play-state: paused;
+  animation-delay: calc(var(--scroll) * -1s);
+  animation-fill-mode: both;
+}
+
+#logo-slash {
+  animation: bounceInSlash 1s linear 1;
   animation-play-state: paused;
   animation-delay: calc(var(--scroll) * -1s);
   animation-fill-mode: both;
