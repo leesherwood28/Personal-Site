@@ -7,6 +7,24 @@ function setupListeners() {
   setupMobileNav();
   setupScrollIntoView();
   setupAge();
+  setupScrollReveal();
+}
+
+function setupScrollReveal() {
+  const handleIntersect = (entries: IntersectionObserverEntry[], observer) => {
+    console.log(entries);
+    entries.forEach((entry) => {
+      if (!entry.isIntersecting) {
+        return;
+      }
+      entry.target.classList.add('animate__animated', 'animate__fadeInUp');
+    });
+  };
+  const observer = new IntersectionObserver(handleIntersect, { threshold: 1 });
+  const targets = document.querySelectorAll('[data-scroll-reveal]');
+  targets.forEach((target) => {
+    observer.observe(target);
+  });
 }
 
 function setupAge() {
