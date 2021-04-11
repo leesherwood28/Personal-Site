@@ -36,16 +36,11 @@ function setupFooterAnimation() {
   scrollArea.addEventListener('scroll', function (e) {
     const topDistance = target.getBoundingClientRect().top;
 
-    if (topDistance > 0) {
+    if (topDistance > document.body.clientHeight) {
       return;
     }
     const footerHeight = target.getBoundingClientRect().height;
-    const maxScroll = footerHeight - document.body.clientHeight;
-    const progress = -topDistance / maxScroll;
-
-    console.log(footerHeight);
-    console.log(maxScroll);
-    console.log(progress);
+    const progress = (document.body.clientHeight - topDistance) / footerHeight;
 
     target.style.setProperty('--scroll', progress.toString());
   });
