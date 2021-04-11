@@ -9,6 +9,9 @@ footer {
   20% {
     transform: translateX(-30vw);
   }
+  60% {
+    transform: translateX(0);
+  }
   to {
     transform: translateX(0);
   }
@@ -20,6 +23,9 @@ footer {
   }
   20% {
     transform: translateX(30vw);
+  }
+  60% {
+    transform: translateX(0);
   }
   to {
     transform: translateX(0);
@@ -40,29 +46,29 @@ footer {
     opacity: 0;
   }
 
-  80% {
+  40% {
     opacity: 0;
   }
 
-  75% {
+  50% {
     opacity: 0;
     transform: scale3d(0.3, 0.3, 0.3);
   }
 
-  80% {
+  60% {
     transform: scale3d(1.1, 1.1, 1.1);
   }
 
-  85% {
+  70% {
     transform: scale3d(0.9, 0.9, 0.9);
   }
 
-  90% {
+  80% {
     opacity: 1;
     transform: scale3d(1.03, 1.03, 1.03);
   }
 
-  95% {
+  90% {
     transform: scale3d(0.97, 0.97, 0.97);
   }
 
