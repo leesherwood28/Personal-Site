@@ -15,6 +15,10 @@ module.exports = {
       spacing: {
         '22': '5.5rem',
       },
+      zIndex: {
+        '-10': '-10',
+        '-20': '-20'
+      },
       animation: {
         wordRotate: 'wordRotate 9s linear infinite 0s',
       },
