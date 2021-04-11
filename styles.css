@@ -14,6 +14,10 @@
   @apply flex items-center bg-white text-black rounded-full px-2;
 }
 
+.skill-chip__icon {
+  @apply w-4 h-4 mr-2;
+}
+
 h1 {
   @apply text-4xl font-montserrat mb-4 font-light;
 }
