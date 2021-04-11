@@ -10,6 +10,18 @@
 @tailwind components;
 @tailwind utilities;
 
+.info-section {
+  @apply grid grid-cols-3 grid-rows-1;
+}
+
+.info-section-title {
+  @apply col-span-1 h-screen sticky top-0 grid place-items-center;
+}
+
+.info-section-content {
+  @apply col-span-2 text-center flex flex-col items-center py-8 px-40;
+}
+
 .skill-chip {
   @apply flex items-center bg-white text-black rounded-full px-2;
 }
