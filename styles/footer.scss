@@ -1,3 +1,16 @@
 footer {
   height: 300vh;
 }
+
+@keyframes slideFromLeft {
+  from {
+    transform: translateX(-30vw);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+#left-bracket {
+  animation: slideFromLeft 4s linear infinite;
+}
