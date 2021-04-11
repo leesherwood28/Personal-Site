@@ -29,6 +29,8 @@ function setupScrollReveal() {
   });
 }
 
+function setupBottomAnimation() {}
+
 function setupAge() {
   const dob = new Date(1993, 0, 28);
 
