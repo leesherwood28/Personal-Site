@@ -4,7 +4,6 @@ $(document).ready(() => setupListeners());
 
 function setupListeners() {
   setupMobileNav();
-  setupScrollIntoView();
   setupAge();
   setupScrollReveal();
 }
