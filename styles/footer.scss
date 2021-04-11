@@ -12,5 +12,8 @@ footer {
 }
 
 #left-bracket {
-  animation: slideFromLeft 4s linear infinite;
+  animation: slideFromLeft 1s linear 1;
+  animation-play-state: paused;
+  animation-delay: calc(var(--scroll) * -1s);
+  animation-fill-mode: both;
 }

@@ -6,11 +6,11 @@ function setupListeners() {
   setupMobileNav();
   setupAge();
   setupScrollReveal();
+  setupFooterAnimation();
 }
 
 function setupScrollReveal() {
   const handleIntersect = (entries: IntersectionObserverEntry[], observer) => {
-    console.log(entries);
     entries.forEach((entry) => {
       if (!entry.isIntersecting) {
         return;
@@ -29,7 +29,27 @@ function setupScrollReveal() {
   });
 }
 
-function setupBottomAnimation() {}
+function setupFooterAnimation() {
+  const target = document.querySelector('footer');
+  const scrollArea = document.querySelector('main');
+
+  scrollArea.addEventListener('scroll', function (e) {
+    const topDistance = target.getBoundingClientRect().top;
+
+    if (topDistance > 0) {
+      return;
+    }
+    const footerHeight = target.getBoundingClientRect().height;
+    const maxScroll = footerHeight - document.body.clientHeight;
+    const progress = -topDistance / maxScroll;
+
+    console.log(footerHeight);
+    console.log(maxScroll);
+    console.log(progress);
+
+    target.style.setProperty('--scroll', progress.toString());
+  });
+}
 
 function setupAge() {
   const dob = new Date(1993, 0, 28);
