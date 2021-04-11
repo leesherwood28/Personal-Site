@@ -10,6 +10,10 @@
 @tailwind components;
 @tailwind utilities;
 
+.skill-chip {
+  @apply flex items-center bg-white text-black rounded-full px-2;
+}
+
 *[data-scroll-reveal] {
   opacity: 0;
 }
