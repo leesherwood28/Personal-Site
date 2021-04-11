@@ -47,6 +47,10 @@
   @apply w-4 h-4 mr-2;
 }
 
+.stack-collection {
+  @apply flex flex-wrap mb-8 justify-center;
+}
+
 .stack-chip {
   @apply bg-black text-white-smoke rounded-full px-2 mr-2 mb-2;
 }
