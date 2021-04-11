@@ -7,6 +7,9 @@ module.exports = {
       'anton': ['Anton', 'sans-serif']
     },
     extend: {
+      colors: {
+        'white-smoke': '#f5f6fa'
+      },
       transitionProperty: {
         'width': 'width',
         'left': 'left',
