@@ -1,12 +1,12 @@
 footer {
-  height: 150vh;
+  height: 200vh;
 }
 
 @keyframes slideFromLeft {
   0% {
     transform: translateX(-30vw);
   }
-  20% {
+  30% {
     transform: translateX(-30vw);
   }
   60% {
@@ -21,7 +21,7 @@ footer {
   0% {
     transform: translateX(30vw);
   }
-  20% {
+  30% {
     transform: translateX(30vw);
   }
   60% {
