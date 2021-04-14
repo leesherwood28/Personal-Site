@@ -20,7 +20,9 @@ function setupScrollReveal() {
       );
     });
   };
-  const observer = new IntersectionObserver(handleIntersect, { threshold: 1 });
+  const observer = new IntersectionObserver(handleIntersect, {
+    threshold: 0.5,
+  });
   const targets = document.querySelectorAll('[data-scroll-reveal]');
   targets.forEach((target) => {
     observer.observe(target);
