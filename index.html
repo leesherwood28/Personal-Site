@@ -22,6 +22,7 @@
   </head>
   <body class="flex flex-col h-screen w-screen overflow-hidden">
     <nav
+      id="desktop-menu"
       class="hidden md:block font-montserrat font-semibold transition-width duration-200 text-yellow-600 z-10 group fixed hover:w-56 w-20 pb-2 h-screen"
     >
       <ol class="flex flex-col">
@@ -50,7 +51,7 @@
           </a>
         </li>
         <li>
-          <a class="desktop-menu-item">
+          <a href="#experience" class="desktop-menu-item">
             <i class="fas fa-briefcase desktop-menu-item__icon"></i>
             <span class="desktop-menu-item__text">Experience</span>
           </a>
@@ -92,7 +93,7 @@
 
         <a href="#" class="mobile-menu-item">Skills</a>
 
-        <a href="#" class="mobile-menu-item">Experience</a>
+        <a href="#experience" class="mobile-menu-item">Experience</a>
 
         <a href="#" class="mobile-menu-item">Contact</a>
       </div>
@@ -416,7 +417,7 @@
           </div>
         </section>
 
-        <section class="info-section">
+        <section id="experience" class="info-section">
           <div class="info-section-title bg-yellow-600">
             <h1 data-scroll-reveal class="text-white-smoke">Experience</h1>
           </div>

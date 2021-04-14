@@ -5,6 +5,35 @@ function setupListeners() {
   setupAge();
   setupScrollReveal();
   setupFooterAnimation();
+  setupNavigation();
+}
+
+function setupNavigation() {
+  document.querySelectorAll(`a[href^='#'`).forEach((el) =>
+    el.addEventListener('click', function (e) {
+      e.preventDefault();
+      const elementToScrollTo = el.attributes.getNamedItem('href').value;
+      scrollToElement(elementToScrollTo);
+
+      // 	e.preventDefault();
+
+      // 	if( $( $.attr(this, 'href') ).length > 0 )
+      // 	{
+      // 		$('html, body').animate(
+      // 		{
+      // 			scrollTop: $( $.attr(this, 'href') ).offset().top
+      // 		}, 400);
+      // 	}
+      // 	return false;
+      // }));
+    })
+  );
+}
+
+function scrollToElement(elementId: string) {
+  const element = document.querySelector(elementId);
+  const scrollArea = document.querySelector('main');
+  scrollArea.scrollTop = element.getBoundingClientRect().top;
 }
 
 function setupScrollReveal() {
