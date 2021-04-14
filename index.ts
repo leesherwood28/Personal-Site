@@ -1,6 +1,9 @@
-document.addEventListener('DOMContentLoaded', () => setupListeners());
+import { gsap, ScrollToPlugin } from 'gsap/all';
+gsap.registerPlugin(ScrollToPlugin);
 
-function setupListeners() {
+document.addEventListener('DOMContentLoaded', () => setupDocument());
+
+function setupDocument() {
   setupMobileNav();
   setupAge();
   setupScrollReveal();
@@ -14,26 +17,13 @@ function setupNavigation() {
       e.preventDefault();
       const elementToScrollTo = el.attributes.getNamedItem('href').value;
       scrollToElement(elementToScrollTo);
-
-      // 	e.preventDefault();
-
-      // 	if( $( $.attr(this, 'href') ).length > 0 )
-      // 	{
-      // 		$('html, body').animate(
-      // 		{
-      // 			scrollTop: $( $.attr(this, 'href') ).offset().top
-      // 		}, 400);
-      // 	}
-      // 	return false;
-      // }));
     })
   );
 }
 
 function scrollToElement(elementId: string) {
-  const element = document.querySelector(elementId);
   const scrollArea = document.querySelector('main');
-  scrollArea.scrollTop = element.getBoundingClientRect().top;
+  gsap.to(scrollArea, { duration: 0.4, scrollTo: { y: elementId } });
 }
 
 function setupScrollReveal() {
