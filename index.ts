@@ -1,6 +1,4 @@
-import $ from 'jquery';
-
-$(document).ready(() => setupListeners());
+document.addEventListener('DOMContentLoaded', () => setupListeners());
 
 function setupListeners() {
   setupMobileNav();
@@ -49,7 +47,10 @@ function setupFooterAnimation() {
 function setupAge() {
   const dob = new Date(1993, 0, 28);
 
-  $('#age').text(gregorianAge(dob, new Date()));
+  document.querySelector('#age').textContent = gregorianAge(
+    dob,
+    new Date()
+  ).toString();
 }
 
 /**
@@ -86,8 +87,8 @@ function gregorianAge(birthDate, ageAtDate) {
 }
 
 function setupMobileNav() {
-  const menu = $('#mobile-menu');
-  const menuButton = $('#mobile-menu-button');
+  const menu = document.querySelector('#mobile-menu');
+  const menuButton = document.querySelector('#mobile-menu-button');
   let menuOpen: boolean = false;
 
   const outsideClickListener = (ev) => {
@@ -95,41 +96,32 @@ function setupMobileNav() {
       return;
     }
     if (
-      menu.find(ev.target).length === 0 &&
-      menuButton.find(ev.target).length === 0
+      !menu.querySelector(ev.target) &&
+      !menuButton.querySelector(ev.target)
     ) {
       closeMenu();
     }
   };
 
   const closeMenu = () => {
-    menu.removeClass('h-52');
-    menu.addClass('h-0');
-    $(document).off('click', outsideClickListener);
+    menu.classList.remove('h-52');
+    menu.classList.add('h-0');
+    document.removeEventListener('click', outsideClickListener);
     menuOpen = false;
   };
 
   const openMenu = () => {
-    menu.removeClass('h-0');
-    menu.addClass('h-52');
+    menu.classList.add('h-0');
+    menu.classList.remove('h-52');
     menuOpen = true;
-    $(document).on('click', outsideClickListener);
+    document.addEventListener('click', outsideClickListener);
   };
 
-  menuButton.on('click', () => {
+  menuButton.addEventListener('click', () => {
     if (menuOpen) {
       closeMenu();
     } else {
       openMenu();
     }
   });
-}
-
-function isElementInViewport(el) {
-  var rect = el.getBoundingClientRect();
-
-  return (
-    rect.top >= 0 &&
-    rect.top <= (window.innerHeight || document.documentElement.clientHeight)
-  );
 }
