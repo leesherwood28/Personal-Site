@@ -20,13 +20,22 @@ function setupDocument() {
 }
 
 function setupNavigation() {
-  document.querySelectorAll(`a[href^='#'`).forEach((el) =>
+  document.querySelectorAll(`a[href^='#'`).forEach((el) => {
+    const elementSection = el.attributes.getNamedItem('href').value;
+
     el.addEventListener('click', function (e) {
       e.preventDefault();
-      const elementToScrollTo = el.attributes.getNamedItem('href').value;
-      scrollToElement(elementToScrollTo);
-    })
-  );
+      scrollToElement(elementSection);
+    });
+    gsap.to(el, {
+      scrollTrigger: {
+        trigger: elementSection,
+        scroller: 'main',
+        toggleActions: 'play reset play reset',
+      },
+      filter: 'grayscale(10%) opacity(1)',
+    });
+  });
 }
 
 function scrollToElement(elementId: string) {
