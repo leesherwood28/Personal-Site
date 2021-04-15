@@ -41,7 +41,11 @@ function setupScrollReveal() {
     gsap.from(entry as any, {
       y: '100%',
       autoAlpha: 0,
-      scrollTrigger: { trigger: entry as any, scroller },
+      scrollTrigger: {
+        trigger: entry as any,
+        scroller,
+        start: '-50% 100%',
+      },
     });
   });
 }
