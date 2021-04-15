@@ -9,6 +9,12 @@
 @tailwind components;
 @tailwind utilities;
 
+*[data-scroll-reveal] {
+  opacity: 0;
+  visibility: hidden;
+  transform: translate(0px, 100%);
+}
+
 .desktop-menu-item {
   @apply flex items-center w-full h-20 cursor-pointer;
 }

@@ -38,9 +38,9 @@ function setupScrollReveal() {
   const revealers = gsap.utils.toArray('[data-scroll-reveal]');
   const scroller = document.querySelector('main');
   revealers.forEach((entry) => {
-    gsap.from(entry as any, {
-      y: '100%',
-      autoAlpha: 0,
+    gsap.to(entry as any, {
+      y: 0,
+      autoAlpha: 1,
       scrollTrigger: {
         trigger: entry as any,
         scroller,
