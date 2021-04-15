@@ -75,12 +75,12 @@ p {
   @apply text-sm  mb-8;
 }
 
-*[data-scroll-reveal] {
+/* *[data-scroll-reveal] {
   opacity: 0;
 }
 *[data-scroll-reveal].revealed {
   opacity: unset;
-}
+} */
 
 .animate__delay-750ms {
   animation-delay: 750ms;

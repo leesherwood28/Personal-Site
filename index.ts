@@ -1,12 +1,20 @@
-import { gsap, ScrollToPlugin } from 'gsap/all';
-gsap.registerPlugin(ScrollToPlugin);
+import { gsap } from 'gsap';
+import { ScrollToPlugin, ScrollTrigger } from 'gsap/all';
 
-document.addEventListener('DOMContentLoaded', () => setupDocument());
+gsap.registerPlugin(ScrollToPlugin, ScrollTrigger);
+
+document.addEventListener('DOMContentLoaded', () => {
+  window.addEventListener('load', () => {
+    requestAnimationFrame(() => {
+      setupDocument();
+    });
+  });
+});
 
 function setupDocument() {
+  setupScrollReveal();
   setupMobileNav();
   setupAge();
-  setupScrollReveal();
   setupFooterAnimation();
   setupNavigation();
 }
@@ -27,24 +35,14 @@ function scrollToElement(elementId: string) {
 }
 
 function setupScrollReveal() {
-  const handleIntersect = (entries: IntersectionObserverEntry[], observer) => {
-    entries.forEach((entry) => {
-      if (!entry.isIntersecting) {
-        return;
-      }
-      entry.target.classList.add(
-        'animate__animated',
-        'animate__fadeInUp',
-        'revealed'
-      );
+  const revealers = gsap.utils.toArray('[data-scroll-reveal]');
+  const scroller = document.querySelector('main');
+  revealers.forEach((entry) => {
+    gsap.from(entry as any, {
+      y: '100%',
+      autoAlpha: 0,
+      scrollTrigger: { trigger: entry as any, scroller },
     });
-  };
-  const observer = new IntersectionObserver(handleIntersect, {
-    threshold: 0.5,
-  });
-  const targets = document.querySelectorAll('[data-scroll-reveal]');
-  targets.forEach((target) => {
-    observer.observe(target);
   });
 }
 
