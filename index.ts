@@ -66,7 +66,6 @@ function setupFooterAnimation() {
       scroller: scrollArea,
       trigger: target,
       scrub: true,
-      markers: true,
       start: 'top center',
       end: `bottom bottom`,
     },
@@ -74,7 +73,7 @@ function setupFooterAnimation() {
   footerAnimation
     .to('#logo-left-bracket', { x: 0, autoAlpha: 1, ease: 'expo' })
     .to('#logo-right-bracket', { x: 0, autoAlpha: 1, ease: 'expo' }, '<')
-    .to('#logo-slash', { autoAlpha: 1, scale: 1, ease: 'back' });
+    .to('#logo-slash', { autoAlpha: 1, scale: 1, ease: 'back' }, '-=0.4');
 }
 
 function setupAge() {
