@@ -57,9 +57,8 @@ function setupFooterAnimation() {
   const logoRightBracket = document.querySelector('#logo-right-bracket');
   const logoSlash = document.querySelector('#logo-slash');
 
-  const bracketSpacing = '30vw';
-  gsap.set(logoLeftBracket, { autoAlpha: 0, left: bracketSpacing });
-  gsap.set(logoRightBracket, { autoAlpha: 0, right: bracketSpacing });
+  gsap.set(logoLeftBracket, { autoAlpha: 0, x: '-30vw' });
+  gsap.set(logoRightBracket, { autoAlpha: 0, x: '30vw' });
   gsap.set(logoSlash, { autoAlpha: 0, scale: 0 });
 
   const footerAnimation = gsap.timeline({
@@ -69,12 +68,13 @@ function setupFooterAnimation() {
       scrub: true,
       markers: true,
       start: 'top center',
+      end: `bottom bottom`,
     },
   });
   footerAnimation
-    .to('#logo-left-bracket', { left: 0, autoAlpha: 1 })
-    .to('#logo-right-bracket', { right: 0, autoAlpha: 1 }, '<')
-    .to('#logo-slash', { autoAlpha: 1, scale: 1, ease: 'elastic' });
+    .to('#logo-left-bracket', { x: 0, autoAlpha: 1, ease: 'expo' })
+    .to('#logo-right-bracket', { x: 0, autoAlpha: 1, ease: 'expo' }, '<')
+    .to('#logo-slash', { autoAlpha: 1, scale: 1, ease: 'back' });
 }
 
 function setupAge() {
