@@ -53,6 +53,28 @@ function setupScrollReveal() {
 function setupFooterAnimation() {
   const target = document.querySelector('footer');
   const scrollArea = document.querySelector('main');
+  const logoLeftBracket = document.querySelector('#logo-left-bracket');
+  const logoRightBracket = document.querySelector('#logo-right-bracket');
+  const logoSlash = document.querySelector('#logo-slash');
+
+  const bracketSpacing = '30vw';
+  gsap.set(logoLeftBracket, { autoAlpha: 0, left: bracketSpacing });
+  gsap.set(logoRightBracket, { autoAlpha: 0, right: bracketSpacing });
+  gsap.set(logoSlash, { autoAlpha: 0, scale: 0 });
+
+  const footerAnimation = gsap.timeline({
+    scrollTrigger: {
+      scroller: scrollArea,
+      trigger: target,
+      scrub: true,
+      markers: true,
+      start: 'top center',
+    },
+  });
+  footerAnimation
+    .to('#logo-left-bracket', { left: 0, autoAlpha: 1 })
+    .to('#logo-right-bracket', { right: 0, autoAlpha: 1 }, '<')
+    .to('#logo-slash', { autoAlpha: 1, scale: 1, ease: 'elastic' });
 }
 
 function setupAge() {
