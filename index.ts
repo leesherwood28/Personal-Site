@@ -53,18 +53,6 @@ function setupScrollReveal() {
 function setupFooterAnimation() {
   const target = document.querySelector('footer');
   const scrollArea = document.querySelector('main');
-
-  scrollArea.addEventListener('scroll', function (e) {
-    const topDistance = target.getBoundingClientRect().top;
-
-    if (topDistance > document.body.clientHeight) {
-      return;
-    }
-    const footerHeight = target.getBoundingClientRect().height;
-    const progress = (document.body.clientHeight - topDistance) / footerHeight;
-
-    target.style.setProperty('--scroll', progress.toString());
-  });
 }
 
 function setupAge() {
