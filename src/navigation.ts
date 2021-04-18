@@ -24,10 +24,9 @@ function setupMobileNavPanel() {
     .set(menuBackdrop, {
       display: 'block',
     })
-    .set(menuPanel, { height: 'auto' })
-    .from(menuPanel, {
+    .to(menuPanel, {
       duration: 0.2,
-      height: 0,
+      height: 'auto',
     });
 
   toggleMenu = () => {
