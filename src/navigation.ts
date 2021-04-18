@@ -44,15 +44,12 @@ function setupMobileNavPanel() {
       '<'
     );
 
-  menuButton.addEventListener('click', () => {
-    console.log('click');
+  const toggleMenu = () => {
     menuAnimation.reversed() ? menuAnimation.play() : menuAnimation.reverse();
-  });
+  };
 
-  menuBackdrop.addEventListener('touchstart', () => {
-    console.log('touch');
-    menuAnimation.reversed() ? menuAnimation.play() : menuAnimation.reverse();
-  });
+  menuButton.addEventListener('click', toggleMenu);
+  menuBackdrop.addEventListener('touchstart', toggleMenu);
 }
 
 /**
