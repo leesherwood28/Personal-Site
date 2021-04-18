@@ -40,7 +40,10 @@ function setupNavigation() {
 
 function scrollToElement(elementId: string) {
   const scrollArea = document.querySelector('main');
-  gsap.to(scrollArea, { duration: 0.4, scrollTo: { y: elementId } });
+  gsap.to(scrollArea, {
+    duration: 0.4,
+    scrollTo: { y: elementId, offsetY: -1 },
+  });
 }
 
 function setupScrollReveal() {
