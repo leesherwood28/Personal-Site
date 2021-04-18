@@ -36,9 +36,13 @@ function setupMobileNavPanel() {
       duration: 0.2,
       height: 0,
     })
-    .from(menuBackdrop, {
-      display: 'none',
-    });
+    .from(
+      menuBackdrop,
+      {
+        display: 'none',
+      },
+      '<'
+    );
 
   menuButton.addEventListener('click', () => {
     console.log('click');
