@@ -1,6 +1,6 @@
 import gsap from 'gsap';
-import { ScrollToPlugin } from 'gsap/all';
-gsap.registerPlugin(ScrollToPlugin);
+import { ScrollToPlugin, ScrollTrigger } from 'gsap/all';
+gsap.registerPlugin(ScrollToPlugin, ScrollTrigger);
 
 /**
  * Sets up the navigation elements of the document
@@ -16,7 +16,7 @@ export function setupNavigation() {
 function setupMobileNavPanel() {
   const menuPanel = document.querySelector('#mobile-menu-panel');
   const menuButton = document.querySelector('#mobile-menu-button');
-
+  const menuBackdrop = document.querySelector('#mobile-menu-backdrop');
   //   const outsideClickListener = (ev) => {
   //     if (!menuOpen) {
   //       return;
@@ -29,14 +29,24 @@ function setupMobileNavPanel() {
   //     }
   //   };
 
-  const menuAnimation = gsap.from(menuPanel, {
-    duration: 0.2,
-    paused: true,
-    reversed: true,
-    height: 0,
-  });
+  const menuAnimation = gsap.timeline({ paused: true, reversed: true });
+
+  menuAnimation
+    .from(menuPanel, {
+      duration: 0.2,
+      height: 0,
+    })
+    .from(menuBackdrop, {
+      display: 'none',
+    });
 
   menuButton.addEventListener('click', () => {
+    console.log('click');
+    menuAnimation.reversed() ? menuAnimation.play() : menuAnimation.reverse();
+  });
+
+  menuBackdrop.addEventListener('touchstart', () => {
+    console.log('touch');
     menuAnimation.reversed() ? menuAnimation.play() : menuAnimation.reverse();
   });
 }
