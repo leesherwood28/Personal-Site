@@ -10,6 +10,8 @@ export function setupNavigation() {
   setupScrollNavigation();
 }
 
+let toggleMenu: () => void;
+
 /**
  * Creates the mobile navigation panel
  */
@@ -17,18 +19,6 @@ function setupMobileNavPanel() {
   const menuPanel = document.querySelector('#mobile-menu-panel');
   const menuButton = document.querySelector('#mobile-menu-button');
   const menuBackdrop = document.querySelector('#mobile-menu-backdrop');
-  //   const outsideClickListener = (ev) => {
-  //     if (!menuOpen) {
-  //       return;
-  //     }
-  //     if (
-  //       !menuPanel.querySelector(ev.target) &&
-  //       !menuButton.querySelector(ev.target)
-  //     ) {
-  //       closeMenuPanel();
-  //     }
-  //   };
-
   const menuAnimation = gsap.timeline({ paused: true, reversed: true });
 
   menuAnimation
@@ -41,7 +31,7 @@ function setupMobileNavPanel() {
       height: 0,
     });
 
-  const toggleMenu = () => {
+  toggleMenu = () => {
     menuAnimation.reversed() ? menuAnimation.play() : menuAnimation.reverse();
   };
 
@@ -59,6 +49,7 @@ function setupScrollNavigation() {
     el.addEventListener('click', function (e) {
       e.preventDefault();
       scrollToElement(elementSection);
+      toggleMenu();
     });
     gsap.to(el, {
       scrollTrigger: {
