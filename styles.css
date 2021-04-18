@@ -37,7 +37,7 @@
 }
 
 .info-section-title {
-  @apply col-span-1 h-80 md:h-screen md:sticky md:top-0 grid place-items-center;
+  @apply col-span-1 h-80 md:h-screen md:sticky md:top-0 grid place-items-center bg-yellow-600 text-white-smoke;
 }
 
 .info-section-content {
