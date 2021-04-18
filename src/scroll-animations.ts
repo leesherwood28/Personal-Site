@@ -7,14 +7,14 @@ gsap.registerPlugin(ScrollTrigger);
  * Sets up the documents scroll animations
  */
 export function setupScollerAnimations() {
-  setupAnimateOnScrollRevalAnimation();
+  setupScrollRevalAnimation();
   setupFooterScrollAnimation();
 }
 
 /**
  * Sets up the translation animation on element scroll reveal
  */
-function setupAnimateOnScrollRevalAnimation() {
+function setupScrollRevalAnimation() {
   const revealers = gsap.utils.toArray('[data-scroll-reveal]');
   const scroller = document.querySelector('main');
   revealers.forEach((entry) => {

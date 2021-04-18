@@ -1,8 +1,5 @@
-import { ScrollToPlugin, ScrollTrigger } from 'gsap/all';
 import { setupNavigation } from './src/navigation';
 import { setupScollerAnimations } from './src/scroll-animations';
-
-gsap.registerPlugin(ScrollToPlugin, ScrollTrigger);
 
 document.addEventListener('DOMContentLoaded', () => {
   window.addEventListener('load', () => {
