@@ -80,6 +80,10 @@ p {
   @apply text-sm  mb-8;
 }
 
+ul {
+  @apply text-sm list-disc text-left self-start ml-24 mb-8;
+}
+
 /* *[data-scroll-reveal] {
   opacity: 0;
 }
