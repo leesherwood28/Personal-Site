@@ -20,12 +20,11 @@ function setupMobileNavPanel() {
   const menuButton = document.querySelector('#mobile-menu-button');
   const menuBackdrop = document.querySelector('#mobile-menu-backdrop');
   const menuAnimation = gsap.timeline({ paused: true, reversed: true });
-
   menuAnimation
-    .from(menuBackdrop, {
-      display: 'none',
-      duration: 0,
+    .set(menuBackdrop, {
+      display: 'block',
     })
+    .set(menuPanel, { height: 'auto' })
     .from(menuPanel, {
       duration: 0.2,
       height: 0,
