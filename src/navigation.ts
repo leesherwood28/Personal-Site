@@ -32,17 +32,14 @@ function setupMobileNavPanel() {
   const menuAnimation = gsap.timeline({ paused: true, reversed: true });
 
   menuAnimation
+    .from(menuBackdrop, {
+      display: 'none',
+      duration: 0,
+    })
     .from(menuPanel, {
       duration: 0.2,
       height: 0,
-    })
-    .from(
-      menuBackdrop,
-      {
-        display: 'none',
-      },
-      '<'
-    );
+    });
 
   const toggleMenu = () => {
     menuAnimation.reversed() ? menuAnimation.play() : menuAnimation.reverse();
