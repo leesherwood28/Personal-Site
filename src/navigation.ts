@@ -30,7 +30,7 @@ function setupMobileNavPanel() {
   //   };
 
   const menuAnimation = gsap.from(menuPanel, {
-    duration: 0.4,
+    duration: 0.2,
     paused: true,
     reversed: true,
     height: 0,
