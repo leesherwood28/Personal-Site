@@ -44,6 +44,10 @@
   @apply col-span-1 md:col-span-2 text-center flex flex-col items-center px-4 py-8 md:px-40;
 }
 
+.skill-chip-collection {
+  @apply grid grid-cols-2 xl:grid-cols-3 md:grid-cols-2 gap-2 self-stretch place-items-center mb-8 whitespace-nowrap;
+}
+
 .skill-chip {
   @apply flex items-center bg-white text-black rounded-full px-2;
 }
