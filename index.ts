@@ -1,5 +1,5 @@
 import { setupNavigation } from './src/navigation';
-import { populateAge } from './src/populate-age';
+import { populateAgeLabel } from './src/populate-age';
 import { setupScollerAnimations } from './src/scroll-animations';
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
  * Sets up the document
  */
 function setupDocument() {
-  populateAge();
+  populateAgeLabel();
   setupNavigation();
   setupScollerAnimations();
 }

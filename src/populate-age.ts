@@ -1,7 +1,7 @@
 /**
- * Populates the document age field with my age
+ * Populates the document age label with my age
  */
-export function populateAge() {
+export function populateAgeLabel() {
   const dob = new Date(1993, 0, 28);
 
   document.querySelector('#age').textContent = calculateApproximateAge(
