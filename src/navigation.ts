@@ -16,7 +16,6 @@ export function setupNavigation() {
 function setupMobileNavPanel() {
   const menuPanel = document.querySelector('#mobile-menu-panel');
   const menuButton = document.querySelector('#mobile-menu-button');
-  let menuOpen: boolean = false;
 
   //   const outsideClickListener = (ev) => {
   //     if (!menuOpen) {
@@ -30,25 +29,15 @@ function setupMobileNavPanel() {
   //     }
   //   };
 
-  const closeMenuPanel = () => {
-    menuPanel.classList.remove('h-52');
-    menuPanel.classList.add('h-0');
-    menuOpen = false;
-  };
-
-  const openMenuPanel = () => {
-    console.log('hello');
-    menuPanel.classList.remove('h-0');
-    menuPanel.classList.add('h-52');
-    menuOpen = true;
-  };
+  const menuAnimation = gsap.from(menuPanel, {
+    duration: 0.4,
+    paused: true,
+    reversed: true,
+    height: 0,
+  });
 
   menuButton.addEventListener('click', () => {
-    if (menuOpen) {
-      closeMenuPanel();
-    } else {
-      openMenuPanel();
-    }
+    menuAnimation.reversed() ? menuAnimation.play() : menuAnimation.reverse();
   });
 }
 
