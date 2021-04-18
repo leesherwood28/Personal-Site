@@ -14,33 +14,32 @@ export function setupNavigation() {
  * Creates the mobile navigation panel
  */
 function setupMobileNavPanel() {
-  const menu = document.querySelector('#mobile-menu');
+  const menuPanel = document.querySelector('#mobile-menu-panel');
   const menuButton = document.querySelector('#mobile-menu-button');
   let menuOpen: boolean = false;
 
-  const outsideClickListener = (ev) => {
-    if (!menuOpen) {
-      return;
-    }
-    if (
-      !menu.querySelector(ev.target) &&
-      !menuButton.querySelector(ev.target)
-    ) {
-      closeMenuPanel();
-    }
-  };
+  //   const outsideClickListener = (ev) => {
+  //     if (!menuOpen) {
+  //       return;
+  //     }
+  //     if (
+  //       !menuPanel.querySelector(ev.target) &&
+  //       !menuButton.querySelector(ev.target)
+  //     ) {
+  //       closeMenuPanel();
+  //     }
+  //   };
 
   const closeMenuPanel = () => {
-    menu.classList.remove('h-52');
-    menu.classList.add('h-0');
-    document.removeEventListener('click', outsideClickListener);
+    menuPanel.classList.remove('h-52');
+    menuPanel.classList.add('h-0');
     menuOpen = false;
   };
 
   const openMenuPanel = () => {
-    menu.classList.add('h-0');
-    menu.classList.remove('h-52');
-    document.addEventListener('click', outsideClickListener);
+    console.log('hello');
+    menuPanel.classList.remove('h-0');
+    menuPanel.classList.add('h-52');
     menuOpen = true;
   };
 
