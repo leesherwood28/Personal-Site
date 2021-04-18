@@ -16,5 +16,5 @@ document.addEventListener('DOMContentLoaded', () => {
 function setupDocument() {
   populateAgeLabel();
   setupNavigation();
-  //setupScollerAnimations();
+  setupScollerAnimations();
 }
