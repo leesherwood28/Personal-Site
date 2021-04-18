@@ -110,7 +110,8 @@ ul {
   animation-delay: 6s;
 }
 
-nav {
+nav,
+#mobile-menu-panel {
   background-color: rgb(20, 20, 20);
 }
 
