@@ -9,3 +9,11 @@ package-lock.json
 *.svg
 *.min.js
 *.js
+*.ttf
+*.woff
+*.woff2
+*.eot
+*.png
+*.jpg
+*.map
+*.*.css
