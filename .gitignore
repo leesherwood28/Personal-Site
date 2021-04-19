@@ -3,3 +3,9 @@ node_modules
 .parcel-cache
 dist
 package-lock.json
+
+
+#temp until parcel v2 works correctly
+*.svg
+*.min.js
+*.js
