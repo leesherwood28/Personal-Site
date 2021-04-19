@@ -2,7 +2,6 @@ node_modules
 .cache
 .parcel-cache
 dist
-package-lock.json
 
 
 #temp until parcel v2 works correctly
