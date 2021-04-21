@@ -2,7 +2,7 @@ node_modules
 .cache
 .parcel-cache
 dist
-
+.firebase
 
 #temp until parcel v2 works correctly
 *.svg
