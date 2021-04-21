@@ -43,11 +43,13 @@ function setupMobileNavPanel() {
 function setupScrollNavigation() {
   document.querySelectorAll(`a[href^='#'`).forEach((el) => {
     const elementSection = el.attributes.getNamedItem('href').value;
-
+    const isMobileMenuItem = !!el.closest('#mobile-menu-panel');
     el.addEventListener('click', function (e) {
       e.preventDefault();
       scrollToElement(elementSection);
-      toggleMenu();
+      if (isMobileMenuItem) {
+        toggleMenu();
+      }
     });
     gsap.to(el, {
       scrollTrigger: {
