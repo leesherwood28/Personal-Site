@@ -42,18 +42,18 @@ function setupMobileNavPanel() {
  */
 function setupScrollNavigation() {
   document.querySelectorAll(`a[href^='#'`).forEach((el) => {
-    const elementSection = el.attributes.getNamedItem('href').value;
+    const navigationLocationId = el.attributes.getNamedItem('href').value;
     const isMobileMenuItem = !!el.closest('#mobile-menu-panel');
     el.addEventListener('click', function (e) {
       e.preventDefault();
-      scrollToElement(elementSection);
+      scrollToElement(navigationLocationId);
       if (isMobileMenuItem) {
         toggleMenu();
       }
     });
     gsap.to(el, {
       scrollTrigger: {
-        trigger: elementSection,
+        trigger: navigationLocationId,
         scroller: 'main',
         toggleActions: 'play reset play reset',
       },
