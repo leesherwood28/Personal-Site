@@ -68,6 +68,6 @@ function scrollToElement(elementId: string) {
   const scrollArea = document.querySelector('main');
   gsap.to(scrollArea, {
     duration: 0.4,
-    scrollTo: { y: elementId, offsetY: -1 },
+    scrollTo: { y: elementId, offsetY: -1, autoKill: true },
   });
 }
