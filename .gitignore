@@ -5,7 +5,6 @@ dist
 .firebase
 
 #temp until parcel v2 works correctly
-*.svg
 *.min.js
 *.js
 *.ttf
