@@ -85,7 +85,7 @@ p {
 }
 
 ul {
-  @apply text-left text-sm list-disc self-start ml-8 md:ml-24 mb-8;
+  @apply text-left text-sm list-disc self-start ml-8 md:ml-12 mb-8;
 }
 
 .link {
