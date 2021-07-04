@@ -41,7 +41,7 @@
 }
 
 .info-section-content {
-  @apply col-span-1 md:col-span-2 text-center flex flex-col items-center px-4 py-8 md:px-40;
+  @apply col-span-1 md:col-span-2 text-center flex flex-col items-center px-4 py-8 md:px-20 lg:px-32 xl:px-40;
 }
 
 .skill-chip-collection {
